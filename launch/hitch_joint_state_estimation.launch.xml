@@ -1,0 +1,22 @@
+<launch>
+
+  <node pkg="hitch_estimation_apriltag_array"
+    exec="hitch_joint_state_estimation_node"
+    name="hitch_joint_state_estimation_node"
+    output="screen">
+      <!--param from="$(find-pkg-share hitch_estimation_apriltag_array)/config/params.yaml"/-->
+
+      <param name="camera_frame"                 value="robot_rear_color_optical_frame"/>                   <!-- Must match apriltag_array_pose_estimation_node's camera_frame -->
+      <param name="apriltag_array_optical_frame" value="robot_cart_apriltag_array_optical_link"/>           <!-- Must match apriltag_array_pose_estimation_node's apriltag_array_optical_frame -->
+      <param name="mobile_base_link"             value="robot_base_footprint"/>                             <!-- Base frame of mobile base -->
+      <param name="camera_to_array_pose_topic"   value="/robot/rear_rgb_camera/apriltag_plane/transform"/>  <!-- Must match apriltag_array_pose_estimation_node's camera_to_array_pose_topic -->
+      <param name="mobile_base_imu_topic"        value="/robot/imu/data"/>                                  <!-- If you have an IMU set its topic here -->
+      <param name="joint_states_topic"           value="/robot/joint_states"/>                              <!-- Where are the states of the joint published? -->
+      <param name="publish_rate"                 value="30.0"/>                                             <!-- Publish this many msgs per second -->
+      <param name="publish_to_topic"             value="true"/>                                             <!-- Publish output angle to topic? -->
+      <param name="publish_to_tf"                value="false"/>                                            <!-- Publish output angle to /tf? -->
+      <param name="mobile_base_hitch_joint"      value="robot_hitch_joint" />                               <!-- The frame of the hitch on the mobile base's side -->
+      <param name="trailer_hitch_joint"          value="robot_cart_hitch_joint"/>                           <!-- The frame of the hitch on the trailer's side -->
+  </node>
+
+</launch>

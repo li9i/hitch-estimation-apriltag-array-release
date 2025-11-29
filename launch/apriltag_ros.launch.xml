@@ -1,0 +1,24 @@
+<launch>
+
+  <node pkg="apriltag_ros"
+    exec="apriltag_node"
+    name="apriltag_node"
+    output="screen">
+      <remap from="image_rect"          to="/robot/rear_rgbd_camera/color/image_raw"/>
+      <remap from="camera_info"         to="/robot/rear_rgbd_camera/color/camera_info"/>
+      <param name="image_transport"     value="raw"/>
+      <param name="family"	            value="36h11"/>
+      <param name="size" 	              value="0.0385"/>
+      <param name="profile"             value="false"/>
+      <param name="publish_tf"          value="false"/>
+      <param name="use_sim_time"        value="true"/>
+      <param name="max_hamming"         value="0"/>
+      <param name="detector.threads"    value="1"/>
+      <param name="detector.decimate"   value="2.0"/>
+      <param name="detector.blur"       value="0.0"/>
+      <param name="detector.refine"     value="true"/>
+      <param name="detector.sharpening" value="0.25"/>
+      <param name="detector.debug"      value="false"/>
+  </node>
+
+</launch>

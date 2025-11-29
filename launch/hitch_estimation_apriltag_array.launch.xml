@@ -1,0 +1,19 @@
+<launch>
+
+  <group>
+    <push-ros-namespace namespace="/robot"/>
+
+    <group>
+      <push-ros-namespace namespace="rear_rgb_camera"/>
+      <group>
+        <push-ros-namespace namespace="apriltag_ros"/>
+        <include file="$(find-pkg-share hitch_estimation_apriltag_array)/launch/apriltag_ros.launch.xml"/>
+      </group> <!-- /robot/rear_rgb_camera/apriltag_ros -->
+
+      <include file="$(find-pkg-share hitch_estimation_apriltag_array)/launch/apriltag_array_pose_estimation.launch.xml"/>
+    </group> <!-- /robot/rear_rgd_camera -->
+
+    <include file="$(find-pkg-share hitch_estimation_apriltag_array)/launch/hitch_joint_state_estimation.launch.xml"/>
+
+  </group> <!-- /robot -->
+</launch>

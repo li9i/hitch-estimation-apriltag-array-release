@@ -1,0 +1,17 @@
+<launch>
+
+  <node pkg="hitch_estimation_apriltag_array"
+    exec="apriltag_array_pose_estimation_node"
+    name="apriltag_array_pose_estimation_node"
+    output="screen">
+
+      <!--param from="$(find-pkg-share hitch_estimation_apriltag_array)/config/params.yaml"/-->
+
+      <param name="camera_frame"                 value="robot_rear_color_optical_frame"/>                  <!-- The camera frame with respect to which April tag detection is made -->
+      <param name="apriltag_array_optical_frame" value="robot_cart_apriltag_array_optical_link"/>          <!-- Name the frame of the April tag array -->
+      <param name="detection_topic"              value="/robot/rear_rgb_camera/apriltag_ros/detections"/>  <!-- apriltag_node info is published here -->
+      <param name="camera_to_array_pose_topic"   value="/robot/rear_rgb_camera/apriltag_plane/transform"/> <!-- The output transform is published here -->
+      <param name="publish_rate"                 value="30.0"/>
+  </node>
+
+</launch>

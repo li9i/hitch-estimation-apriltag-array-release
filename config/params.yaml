@@ -1,0 +1,25 @@
+#______________________________________________________________________________
+/robot/rear_rgb_camera/apriltag_array_pose_estimation_node:
+  ros__parameters:
+    camera_frame:                 "robot_rear_color_optical_frame"                  # The camera frame with respect to which April tag detection is made
+    apriltag_array_optical_frame: "robot_cart_apriltag_array_optical_link"          # Name the frame of the April tag array
+    detection_topic:              "/robot/rear_rgb_camera/apriltag_ros/detections"  # apriltag_node info is published here
+    camera_to_array_pose_topic:   "/robot/rear_rgb_camera/apriltag_plane/transform" # The output transform is published here
+    publish_rate:                 30.0                                              # Publish this many msgs per second
+# ______________________________________________________________________________
+/robot/hitch_joint_state_estimation_node:
+  ros__parameters:
+    camera_frame:                 "robot_rear_color_optical_frame"                  # Must match camera_frame above
+    apriltag_array_optical_frame: "robot_cart_apriltag_array_optical_link"          # Must match apriltag_array_optical_frame above
+    mobile_base_link:             "robot_base_footprint"                            # Base frame of mobile base
+    camera_to_array_pose_topic:   "/robot/rear_rgb_camera/apriltag_plane/transform" # Must match camera_to_array_pose_topic above
+    mobile_base_imu_topic:        "/robot/imu/data"                                 # If you have an IMU set its topic here
+    joint_states_topic:           "/robot/joint_states"                             # Where are the states of the joint published?
+    publish_rate:                 30.0                                              # Publish this many msgs per second
+    publish_to_topic:             true                                              # Publish output angle to topic?
+    publish_to_tf:                false                                             # Publish output angle to /tf?
+    # --------------------------------------------------------------------------
+    # Trailer frames
+    # --------------------------------------------------------------------------
+    mobile_base_hitch_joint:    "robot_hitch_joint"                                 # The frame of the hitch on the mobile base's side
+    trailer_hitch_joint:        "robot_cart_hitch_joint"                            # The frame of the hitch on the trailer's side
