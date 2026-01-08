@@ -24,4 +24,4 @@ tracks:
     ros_distro: humble
     vcs_type: git
     vcs_uri: https://github.com/li9i/hitch-estimation-apriltag-array.git
-    version: 0.0.1
+    version: 0.0.2
