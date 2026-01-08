@@ -1,0 +1,12 @@
+Source: ros-jazzy-hitch-estimation-apriltag-array
+Section: misc
+Priority: optional
+Maintainer: li9i <alexandros.filotheou@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-ros-workspace, python3-all, python3-setuptools, dh-python
+Homepage: https://github.com/li9i/apriltag-hitch-estimation
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-hitch-estimation-apriltag-array
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ros-jazzy-apriltag-ros, ros-jazzy-geometry-msgs, ros-jazzy-rclpy, ros-jazzy-sensor-msgs, ros-jazzy-tf-transformations, ros-jazzy-tf2-ros, ros-jazzy-ros-workspace
+Description: A package that estimates the hitch joint state between a robot and a trailer by optical recognition of an array of April tags mounted at the front of the trailer by the rear camera of the robot
