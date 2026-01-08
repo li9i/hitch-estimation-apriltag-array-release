@@ -1,9 +1,0 @@
-Format: Bloom subset of https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: hitch_estimation_apriltag_array
-Upstream-Contact: https://github.com/li9i/apriltag-hitch-estimation/issues
-Source: https://github.com/li9i/apriltag-hitch-estimation
-
-Files: See file headers in repository for details
-Copyright: See package copyright in source code for details
-License: BSD
- See repository for full license text
