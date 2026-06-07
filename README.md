@@ -1,3 +1,26 @@
+## hitch_estimation_apriltag_array (lyrical) - 0.0.3-1
+
+The packages in the `hitch_estimation_apriltag_array` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --new-track --rosdistro lyrical --track lyrical hitch_estimation_apriltag_array` on `Sun, 07 Jun 2026 13:21:22 -0000`
+
+The `hitch_estimation_apriltag_array` package was released.
+
+Version of package(s) in repository `hitch_estimation_apriltag_array`:
+
+- upstream repository: https://github.com/li9i/hitch-estimation-apriltag-array.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.0.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## hitch_estimation_apriltag_array (jazzy) - 0.0.2-1
 
 The packages in the `hitch_estimation_apriltag_array` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy hitch_estimation_apriltag_array` on `Thu, 08 Jan 2026 12:39:29 -0000`
