@@ -4,7 +4,7 @@ package_name = 'hitch_estimation_apriltag_array'
 
 setup(
     name=package_name,
-    version='0.1.0',
+    version='0.0.3',
     packages=[package_name],
     data_files=[
         ('share/' + package_name, ['package.xml']),
@@ -20,7 +20,7 @@ setup(
     maintainer='li9i',
     maintainer_email='alexandros.filotheou@gmail.com',
     description='A package that estimates the hitch joint state between a robot and a trailer by optical recognition of an array of april tags mounted at the front of the trailer by the rear camera of the robot',
-    license='MIT',
+    license='BSD-3-Clause',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

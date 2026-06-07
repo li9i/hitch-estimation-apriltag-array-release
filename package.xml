@@ -1,6 +1,6 @@
 <package format="3">
   <name>hitch_estimation_apriltag_array</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <description>
     A package that estimates the hitch joint state between a robot and a
     trailer by optical recognition of an array of April tags mounted at the
@@ -13,14 +13,14 @@
   <url type="repository">https://github.com/li9i/apriltag-hitch-estimation</url>
   <url type="bugtracker">https://github.com/li9i/apriltag-hitch-estimation/issues</url>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
-
   <exec_depend>rclpy</exec_depend>
   <exec_depend>apriltag_ros</exec_depend>
+  <exec_depend>apriltag_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>tf_transformations</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
